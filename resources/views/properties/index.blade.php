@@ -1,9 +1,11 @@
 
 <html >
-
+<title>
+    屬性列表
+</title>
 <body class="antialiased">
 <h1 align="center">屬性列表</h1>
-<a href="<?php echo route('pokemon.index');?>">回到神奇寶貝列表</a>
+<p align="center"><a   href="<?php echo route('pokemon.index');?>"  >回到神奇寶貝列表</a></p>
 <table border="1" align="center">
     <tr>
         <th>編號</th>

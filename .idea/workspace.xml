@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56524c37-4285-4c22-9b41-75e69be63c7a" name="Default Changelist" comment="" />
+    <list default="true" id="56524c37-4285-4c22-9b41-75e69be63c7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/pokemons.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/pokemons.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/PropertiesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PropertiesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/properties/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/properties/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/properties/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/properties/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/show.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +33,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -138,7 +157,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../62" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -168,6 +187,7 @@
       <workItem from="1604222310186" duration="18057000" />
       <workItem from="1604598041978" duration="618000" />
       <workItem from="1604648520828" duration="9924000" />
+      <workItem from="1605144465844" duration="6575000" />
     </task>
     <servers />
   </component>

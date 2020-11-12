@@ -19,26 +19,34 @@ class PropertiesTableSeeder extends Seeder
 
         return $home[rand(0,count($home)-1)];
     }
-    public function ranproperty()
+    public function ranproperty($i)
     {
-        $property=['水','火','草','電','地面','蟲','一般','毒','格鬥','冰','幽靈','超能','龍','鋼','惡'];
+        $property=['火','水','草','電','地面','蟲','一般','毒','格鬥','冰','幽靈','超能','龍','鋼','惡'];
+
+        return $property[$i];
+
+    }
+    public function ranch($i)
+    {
+        $characteristic=['高溫','濕氣','茂盛','靜電','堅實','適應力','溫馴','惡臭','好戰','低溫','漂浮','精神力','壓迫感','堅硬','夢魘'];
+        return $characteristic[$i];
+    }
+    public function ranweak()
+    {
+        $property=['火','水','草','電','地面','蟲','一般','毒','格鬥','冰','幽靈','超能','龍','鋼','惡'];
 
         return $property[rand(0,count($property)-1)];
 
     }
-    public function ranch()
-    {
-        $characteristic=['高溫','濕氣','茂盛','靜電','堅實','適應力','溫馴','惡臭','好戰','低溫','漂浮','精神力','壓迫感','堅硬','夢魘'];
-        return $characteristic[rand(0,count($characteristic)-1)];
-    }
+
 
     public function run()
     {
         for($i=0;$i<15;$i++) {
-            $property = $this->ranproperty();
-            $characteristic = $this->ranch();
+            $property = $this->ranproperty($i);
+            $characteristic = $this->ranch($i);
             $home = $this->ranhome();
-            $weakness = $this->ranch();
+            $weakness = $this->ranweak();
             $datetime = Carbon::now()->subMinutes(rand(1, 55));
 
 

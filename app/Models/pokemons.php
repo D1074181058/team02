@@ -9,7 +9,7 @@ class pokemons extends Model
 {
     use HasFactory;
     protected $table="pokemons";
-    protected $primaryKey="num";
+    protected $primaryKey="num_ID";
     protected $fillable=[
 
         'name',

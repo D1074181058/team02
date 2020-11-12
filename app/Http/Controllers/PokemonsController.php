@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\pokemon;
+
 use App\Models\pokemons;
 use Carbon\Carbon;
 use Database\Seeders\PokemonsTableSeeder;
@@ -46,19 +46,34 @@ class PokemonsController extends Controller
         }
         $data = compact('player_name', 'player_country', 'player_position');**/
        //onlyshow
-        $temp=pokemon::findorfail($id);
+        $temp=pokemons::findorfail($id);
         if ($temp==null)
             return"NO Find";
+
+
+        $temp->name='百變怪';
+        $temp->pr_ID=2;
+        $temp->height=0.5;
+        $temp->weight=10;
+        $temp->growing='否';
+        $temp->group='豐緣';
+        $temp->place='泥沼';
+        $temp->save();
         $pokemon=$temp->toArray();
+
+
 
         return view('pokemon.edit',$pokemon);
     }
 
     public function show($id)
     {
-        $temp=pokemon::findorfail($id);
+        $temp=pokemons::findorfail($id);
         if ($temp==null)
-            return"NO Find";
+            return abort(404);
+
+
+
         $pokemon=$temp->toArray();
         return view('pokemon.show',$pokemon);
     }

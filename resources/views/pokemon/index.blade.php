@@ -2,9 +2,12 @@
 <html >
 
 <body >
-<h1>神奇寶貝列表</h1>
-
-<a href="<?php echo route('properties.index');?>">回到屬性列表</a>
+<title>
+    神奇寶貝列表
+</title>
+<h1 align="center">神奇寶貝列表</h1>
+<p align="center">
+    <a href="<?php echo route('properties.index');?>">回到屬性列表</a></p>
 <table border="1" align="center">
     <tr>
         <th>編號</th>

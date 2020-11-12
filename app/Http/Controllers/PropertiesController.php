@@ -39,10 +39,15 @@ class PropertiesController extends Controller
         $player_position = "前鋒";
         }
         $data = compact('player_name', 'player_country', 'player_position');**/
-       //onlyshow
+
         $temp=properties::findorfail($id);
         if ($temp==null)
             return"No Find";
+        $temp->property='無';
+        $temp->characteristic='隨和';
+        $temp->home='各地';
+        $temp->weakness='無';
+        $temp->save();
         $property=$temp->toArray();
 
         return view('properties.edit',$property);
