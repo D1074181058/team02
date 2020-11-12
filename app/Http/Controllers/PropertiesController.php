@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\properties;
+use App\Models\property;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -11,13 +11,13 @@ class PropertiesController extends Controller
 
     public function index()
     {
-        $properties=properties::all();
+        $properties=property::all();
         return view('properties.index',['properties'=>$properties]);
     }
 
     public function create()
     {
-        $property=properties::create([
+        $property=property::create([
             'property'=>'無',
             'characteristic'=>'適應',
             'home'=>'黏稠濕地',
@@ -40,7 +40,7 @@ class PropertiesController extends Controller
         }
         $data = compact('player_name', 'player_country', 'player_position');**/
 
-        $temp=properties::findorfail($id);
+        $temp=property::findorfail($id);
         if ($temp==null)
             return"No Find";
         $temp->property='無';
@@ -55,7 +55,7 @@ class PropertiesController extends Controller
 
     public function show($id)
     {
-        $temp=properties::findorfail($id);
+        $temp=property::findorfail($id);
         if ($temp==null)
             return"No Find";
         $property=$temp->toArray();

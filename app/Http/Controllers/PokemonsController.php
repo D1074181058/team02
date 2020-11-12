@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\pokemons;
+use App\Models\pokemon;
 use Carbon\Carbon;
 use Database\Seeders\PokemonsTableSeeder;
 
@@ -14,13 +14,13 @@ class PokemonsController extends Controller
 
     public function index()
     {
-        $pokemons=pokemons::all();
+        $pokemons=pokemon::all();
         return view('pokemon.index',['pokemons'=>$pokemons]);
     }
 
     public function create()
     {
-        $pokemon=pokemons::create([
+        $pokemon=pokemon::create([
             'name'=>'達克萊伊',
             'pr_ID'=>15,
             'height'=>1.5,
@@ -46,7 +46,7 @@ class PokemonsController extends Controller
         }
         $data = compact('player_name', 'player_country', 'player_position');**/
        //onlyshow
-        $temp=pokemons::findorfail($id);
+        $temp=pokemon::findorfail($id);
         if ($temp==null)
             return"NO Find";
 
@@ -68,7 +68,7 @@ class PokemonsController extends Controller
 
     public function show($id)
     {
-        $temp=pokemons::findorfail($id);
+        $temp=pokemon::findorfail($id);
         if ($temp==null)
             return abort(404);
 

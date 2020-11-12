@@ -4,7 +4,7 @@
     新增一筆屬性
 </title>
 <body class="antialiased">
-<h1>新增一筆屬性</h1>
+<h1 align="center">新增一筆屬性</h1>
 <p align="center">
     <a href="<?php echo route('properties.index');?>">回到屬性列表</a></p>
 <table border="1" align="center">
