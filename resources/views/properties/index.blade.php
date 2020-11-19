@@ -13,6 +13,8 @@
         <th>特性</th>
         <th>主場</th>
         <th>弱點屬性</th>
+        <th>檢視</th>
+        <th>編輯</th>
     </tr>
     @foreach($properties as $property)
         <tr>
@@ -21,6 +23,9 @@
             <td align="center" valign="center">{{$property->characteristic}}</td>
             <td align="center" valign="center">{{$property->home}}</td>
             <td align="center" valign="center">{{$property->weakness}}</td>
+
+            <td align="center" valign="center"> <a href="{{ route('properties.show',['id'=> $property->num])}}">檢視</a></td>
+            <td align="center" valign="center"> <a href="{{ route('properties.edit',['id'=> $property->num])}}">編輯</a></td>
         </tr>
     @endforeach
 </table>

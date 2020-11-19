@@ -18,6 +18,9 @@
         <th>進化可能</th>
         <th>地區</th>
         <th>出現場所</th>
+        <th>檢視</th>
+        <th>編輯</th>
+
     </tr>
     @foreach($pokemons as $pokemon)
         <tr>
@@ -36,6 +39,9 @@
 
             <td align="center" valign="center">{{$pokemon->group}}</td>
             <td align="center" valign="center">{{$pokemon->place}}</td>
+
+            <td align="center" valign="center"> <a href="{{route('pokemon.show',['id'=> $pokemon->num_ID])}}">檢視</a></td>
+            <td align="center" valign="center"> <a href="{{ route('pokemon.edit',['id'=> $pokemon->num_ID])}}">編輯</a></td>
         </tr>
     @endforeach
 </table>
