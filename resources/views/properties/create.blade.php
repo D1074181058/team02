@@ -1,30 +1,36 @@
 
-<html >
-<title>
-    新增一筆屬性
-</title>
-<body class="antialiased">
-<h1 align="center">新增一筆屬性</h1>
-<p align="center">
-    <a href="<?php echo route('properties.index');?>">回到屬性列表</a></p>
-<table border="1" align="center">
-    <tr>
-        <th>編號</th>
-        <th>派系</th>
-        <th>特性</th>
-        <th>主場</th>
-        <th>弱點屬性</th>
-    </tr>
-    <tr>
-        <td align="center" valign="center">{{$num}}</td>
-        <td align="center" valign="center">{{$property}}</td>
-        <td align="center" valign="center">{{$characteristic}}</td>
-        <td align="center" valign="center">{{$home}}</td>
-        <td align="center" valign="center">{{$weakness}}</td>
-    </tr>
-</table>
+@extends('app')
+
+@section('title' ,'新建')
+
+@section('header','新建一筆屬性')
+
+@section('href')
+    <a href="<?php echo route('properties.index');?>">回到屬性列表</a>
+@endsection
+
+@section('pokemon_contents')
+    {!! Form::open(['url' => 'properties/store']) !!}
+    <div align="center"  valign="center"  class="form-group">
+        {!! Form::Label('property','派系') !!}
+        {!! Form::text('property',null,['class'=>'form-control']) !!}
+    </div>
+
+    <div  align="center"  valign="center" class="form-group">
+        {!! Form::Label('characteristic','特性') !!}
+        {!! Form::text('characteristic',null,['class'=>'form-control']) !!}
+    </div>
+
+    <div align="center"   valign="center" class="form-group">
+        {!! Form::Label('home','主場') !!}
+        {!! Form::text('home',null,['class'=>'form-control']) !!}
+    </div>
+
+    <div align="center"  valign="center" class="form-group">
+        {!! Form::Label('weakness','弱點屬性') !!}
+        {!! Form::text('weakness',null,['class'=>'form-control']) !!}
+    </div>
+    {!! Form::close() !!}
+@endsection
 
 
-
-</body>
-</html>

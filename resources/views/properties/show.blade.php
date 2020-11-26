@@ -1,12 +1,15 @@
 
-<html >
-<title>
-    顯示一筆屬性
-</title>
-<body >
-<h1 border="1" align="center">顯示一筆屬性</h1>
-<p align="center">
-    <a href="<?php echo route('properties.index');?>" border="1" align="center">回到屬性列表</a></p>
+@extends('app')
+
+@section('title' ,'顯示單筆')
+
+@section('header','顯示一筆屬性')
+
+@section('href')
+    <a href="<?php echo route('properties.index');?>">回到屬性列表</a>
+@endsection
+
+@section('pokemon_contents')
 <table border="1" align="center">
     <tr>
         <th>編號</th>
@@ -24,5 +27,4 @@
     </tr>
 </table>
 
-</body>
-</html>
+@endsection

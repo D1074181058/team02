@@ -1,13 +1,14 @@
+@extends('app')
 
-<html >
+@section('title' ,'寶可夢列表')
 
-<body >
-<title>
-    神奇寶貝列表
-</title>
-<h1 align="center">神奇寶貝列表</h1>
-<p align="center">
-    <a href="<?php echo route('properties.index');?>">回到屬性列表</a></p>
+@section('header','寶可夢列表')
+
+@section('href')
+    <a href="<?php echo route('properties.index');?>">回到屬性列表</a>
+@endsection
+
+@section('pokemon_contents')
 <table border="1" align="center">
     <tr>
         <th>編號</th>
@@ -45,5 +46,4 @@
         </tr>
     @endforeach
 </table>
-</body>
-</html>
+@endsection

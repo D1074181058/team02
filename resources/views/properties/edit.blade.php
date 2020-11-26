@@ -1,12 +1,15 @@
 
-<html >
-<title>
-    修改一筆屬性
-</title>
-<body class="antialiased">
-<h1 align="center">修改一筆屬性</h1>
-<p align="center">
-    <a href="<?php echo route('properties.index');?>">回到屬性列表</a></p>
+@extends('app')
+
+@section('title' ,'編輯')
+
+@section('header','編輯')
+
+@section('href')
+    <a href="<?php echo route('properties.index');?>">回到屬性列表</a>
+@endsection
+
+@section('pokemon_contents')
 <table border="1" align="center">
     <tr>
         <th>編號</th>
@@ -23,5 +26,4 @@
         <td align="center" valign="center">{{$weakness}}</td>
     </tr>
 </table>
-</body>
-</html>
+@endsection
