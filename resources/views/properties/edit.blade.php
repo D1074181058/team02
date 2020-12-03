@@ -10,20 +10,34 @@
 @endsection
 
 @section('pokemon_contents')
-<table border="1" align="center">
-    <tr>
-        <th>編號</th>
-        <th>派系</th>
-        <th>特性</th>
-        <th>主場</th>
-        <th>弱點屬性</th>
-    </tr>
-    <tr>
-        <td align="center" valign="center">{{$num}}</td>
-        <td align="center" valign="center">{{$property}}</td>
-        <td align="center" valign="center">{{$characteristic}}</td>
-        <td align="center" valign="center">{{$home}}</td>
-        <td align="center" valign="center">{{$weakness}}</td>
-    </tr>
-</table>
+    <p align="center"  valign="center" >編號：{!! $num_ID !!} </p><br/>
+    {!! Form::open(['url' => 'properties/update'.$num, 'method' => 'patch' ]) !!}
+    <div align="center"  valign="center"  class="form-group">
+        {!! Form::Label('num','編號') !!}
+        {!! Form::text('num',$num) !!}
+    </div>
+
+    <div align="center"  valign="center"  class="form-group">
+        {!! Form::Label('property','派系') !!}
+        {!! Form::text('property',$property,['class'=>'form-control']) !!}
+    </div>
+
+    <div  align="center"  valign="center" class="form-group">
+        {!! Form::Label('characteristic','特性') !!}
+        {!! Form::text('characteristic',$characteristic,['class'=>'form-control']) !!}
+    </div>
+
+    <div align="center"   valign="center" class="form-group">
+        {!! Form::Label('home','主場') !!}
+        {!! Form::text('home',$home,['class'=>'form-control']) !!}
+    </div>
+
+    <div align="center"  valign="center" class="form-group">
+        {!! Form::Label('weakness','弱點屬性') !!}
+        {!! Form::text('weakness',$weakness,['class'=>'form-control']) !!}
+    </div>
+    <div align="center"  valign="center" class="form-group">
+        {!! Form::submit('修改',['class' =>'btn btn-primary form-control']) !!}
+    </div>
+    {!! Form::close() !!}
 @endsection

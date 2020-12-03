@@ -41,13 +41,7 @@ class PropertiesController extends Controller
         $data = compact('player_name', 'player_country', 'player_position');**/
 
         $temp=property::findorfail($id);
-        if ($temp==null)
-            return"No Find";
-        $temp->property='無';
-        $temp->characteristic='隨和';
-        $temp->home='各地';
-        $temp->weakness='無';
-        $temp->save();
+
         $property=$temp->toArray();
 
         return view('properties.edit',$property);
@@ -61,6 +55,34 @@ class PropertiesController extends Controller
         $property=$temp->toArray();
         return view('properties.show',$property);
     }
+    public function store(Request $request)
+    {
+        $property = $request ->input('name');
+        $characteristic = $request ->input('characteristic');
+        $home = $request ->input('home');
+        $weakness = $request ->input('weakness');
 
+
+        $pokemon=pokemon::create([
+            'name'=>$property,
+            'pr_ID'=>$characteristic,
+            'height'=>$home,
+            'weight'=>$weakness,
+
+            'created_at'=>Carbon::now() ,
+            'updated_at'=>Carbon::now()]);
+
+        return redirect('properties');
+    }
+    public function update($id,Request $request){
+
+        $temp=property::findorfail($id);
+        $temp->property = $request ->input('name');
+        $temp->characteristic = $request ->input('characteristic');
+        $temp->home = $request ->input('home');
+        $temp->weakness = $request ->input('weakness');
+        $temp->save();
+        return redirect('properties');
+    }
 
 }

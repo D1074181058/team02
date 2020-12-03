@@ -44,6 +44,8 @@
         {!! Form::Label('place','出現場所') !!}
         {!! Form::text('place',null,['class'=>'form-control']) !!}
     </div>
-
+    <div align="center"  valign="center" class="form-group">
+        {!! Form::submit('新增',['class' =>'btn btn-primary form-control']) !!}
+    </div>
     {!! Form::close() !!}
 @endsection

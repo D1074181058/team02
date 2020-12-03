@@ -30,6 +30,9 @@
         {!! Form::Label('weakness','弱點屬性') !!}
         {!! Form::text('weakness',null,['class'=>'form-control']) !!}
     </div>
+    <div align="center"  valign="center" class="form-group">
+        {!! Form::submit('新增',['class' =>'btn btn-primary form-control']) !!}
+    </div>
     {!! Form::close() !!}
 @endsection
 

@@ -29,7 +29,9 @@ Route::get('pokemons/{id}', [PokemonsController::class, 'show'])->where('id', '[
 
 Route::get('pokemons/{id}/edit', [PokemonsController::class, 'edit'])->where('id', '[0-9]+')->name('pokemon.edit');
 
+Route::post('pokemons/store', [PokemonsController::class, 'store'])->name('pokemon.store');
 
+Route::patch('pokemons/update/{id}', [PokemonsController::class, 'update'])->where('id', '[0-9]+')->name('pokemon.update');
 
 
 
@@ -42,3 +44,7 @@ Route::get('properties/create', [PropertiesController::class, 'create'])->name('
 Route::get('properties/{id}', [PropertiesController::class, 'show'])->where('id', '[0-9]+')->name('properties.show');
 
 Route::get('properties/{id}/edit', [PropertiesController::class, 'edit'])->where('id', '[0-9]+')->name('properties.edit');
+
+Route::post('properties/store', [PokemonsController::class, 'store'])->name('properties.store');
+
+Route::patch('properties/update/{id}', [PokemonsController::class, 'update'])->where('id', '[0-9]+')->name('properties.update');
