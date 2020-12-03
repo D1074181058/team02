@@ -33,6 +33,7 @@ Route::post('pokemons/store', [PokemonsController::class, 'store'])->name('pokem
 
 Route::patch('pokemons/update/{id}', [PokemonsController::class, 'update'])->where('id', '[0-9]+')->name('pokemon.update');
 
+Route::delete('pokemons/delete/{id}', [PokemonsController::class, 'destory'])->where('id', '[0-9]+')->name('pokemon.destory');
 
 
 // 查詢
@@ -45,6 +46,8 @@ Route::get('properties/{id}', [PropertiesController::class, 'show'])->where('id'
 
 Route::get('properties/{id}/edit', [PropertiesController::class, 'edit'])->where('id', '[0-9]+')->name('properties.edit');
 
-Route::post('properties/store', [PokemonsController::class, 'store'])->name('properties.store');
+Route::post('properties/store', [PropertiesController::class, 'store'])->name('properties.store');
 
-Route::patch('properties/update/{id}', [PokemonsController::class, 'update'])->where('id', '[0-9]+')->name('properties.update');
+Route::patch('properties/update/{id}', [PropertiesController::class, 'update'])->where('id', '[0-9]+')->name('properties.update');
+
+Route::delete('properties/delete/{id}', [PropertiesController::class, 'destory'])->where('id', '[0-9]+')->name('properties.destory');

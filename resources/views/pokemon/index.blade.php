@@ -13,7 +13,7 @@
     <tr>
         <th>編號</th>
         <th>神奇寶貝</th>
-        <th>派系編號</th>
+        <th>派系</th>
         <th>身高(m)</th>
         <th>體重(kg)</th>
         <th>進化可能</th>
@@ -21,13 +21,14 @@
         <th>出現場所</th>
         <th>檢視</th>
         <th>編輯</th>
+        <th>刪除</th>
 
     </tr>
     @foreach($pokemons as $pokemon)
         <tr>
             <td align="center" valign="center">{{$pokemon->num_ID}}</td>
             <td align="center" valign="center">{{$pokemon->name}}</td>
-            <td align="center" valign="center">{{$pokemon->pr_ID}}</td>
+            <td align="center" valign="center">{{$pokemon->property}}</td>
             <td align="center" valign="center">{{$pokemon->height}}</td>
             <td align="center" valign="center">{{$pokemon->weight}}</td>
             <td align="center" valign="center">
@@ -43,6 +44,14 @@
 
             <td align="center" valign="center"> <a href="{{route('pokemon.show',['id'=> $pokemon->num_ID])}}">檢視</a></td>
             <td align="center" valign="center"> <a href="{{ route('pokemon.edit',['id'=> $pokemon->num_ID])}}">編輯</a></td>
+            <td align="center" valign="center">
+            <form action="{{ url('/pokemons/delete',['id'=>$pokemon->num_ID])}}" method="post">
+                <input class="btn btn-default" type="submit" value="刪除"/>
+                @method('delete')
+                @csrf
+
+            </form>
+            </td>
         </tr>
     @endforeach
 </table>

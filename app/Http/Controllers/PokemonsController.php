@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Database\Seeders\PokemonsTableSeeder;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class PokemonsController extends Controller
@@ -14,7 +15,21 @@ class PokemonsController extends Controller
 
     public function index()
     {
-        $pokemons=pokemon::all();
+        $pokemons=DB::table('pokemons')
+            ->join('properties' , 'pokemons.pr_ID' , '=' , 'properties.num')
+            ->orderby('pokemons.num_ID')
+            ->select(
+                'pokemons.num_ID',
+                'pokemons.name',
+                'properties.property as property',
+                'pokemons.height',
+                'pokemons.weight',
+                'pokemons.growing',
+                'pokemons.group',
+                'pokemons.place',
+
+
+            )->get();
         return view('pokemon.index',['pokemons'=>$pokemons]);
     }
 
@@ -117,6 +132,12 @@ class PokemonsController extends Controller
         $temp->group = $request ->input('group');
         $temp->place = $request ->input('place');
         $temp->save();
+        return redirect('pokemons');
+    }
+    public function destory($id)
+    {
+        $pokemon=pokemon::findorfail($id);
+        $pokemon->delete();
         return redirect('pokemons');
     }
 

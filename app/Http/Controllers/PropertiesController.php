@@ -17,14 +17,8 @@ class PropertiesController extends Controller
 
     public function create()
     {
-        $property=property::create([
-            'property'=>'無',
-            'characteristic'=>'適應',
-            'home'=>'黏稠濕地',
-            'weakness'=>'無',
-            'created_at'=>Carbon::now() ,
-            'updated_at'=>Carbon::now()]);
-        return view('properties.create',$property->toArray());
+
+        return view('properties.create');
     }
     public function edit($id)
     {
@@ -84,5 +78,10 @@ class PropertiesController extends Controller
         $temp->save();
         return redirect('properties');
     }
-
+    public function destory($id)
+    {
+        $property=property::findorfail($id);
+        $property->delete();
+        return redirect('properties');
+    }
 }
