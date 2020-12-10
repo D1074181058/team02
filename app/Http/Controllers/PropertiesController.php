@@ -36,9 +36,9 @@ class PropertiesController extends Controller
 
         $temp=property::findorfail($id);
 
-        $property=$temp->toArray();
 
-        return view('properties.edit',$property);
+
+        return view('properties.edit',['properties'=>$temp]);
     }
 
     public function show($id)

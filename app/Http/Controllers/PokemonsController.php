@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\pokemon;
+use App\Models\property;
 use Carbon\Carbon;
 use Database\Seeders\PokemonsTableSeeder;
 
@@ -81,20 +82,21 @@ class PokemonsController extends Controller
         $pokemon=$temp->toArray();
          */
         $temp=pokemon::findorfail($id);
-        $pokemon=$temp->toArray();
-        return view('pokemon.edit',$pokemon);
+
+        return view('pokemon.edit',['pokemon'=>$temp]);
     }
 
     public function show($id)
     {
-        $temp=pokemon::findorfail($id);
+        /*$temp=pokemon::findorfail($id);
         if ($temp==null)
             return abort(404);
+        $pokemon=$temp->toArray();*/
 
+        $pokemon=pokemon::findOrFail($id);
+        $property=property::findOrFail($pokemon->num_ID);
 
-
-        $pokemon=$temp->toArray();
-        return view('pokemon.show',$pokemon);
+        return view('pokemon.show',['pokemons'=>$pokemon,'property_name'=>$property->property]);
     }
     public function store(Request $request)
     {
@@ -139,6 +141,22 @@ class PokemonsController extends Controller
         $pokemon=pokemon::findorfail($id);
         $pokemon->delete();
         return redirect('pokemons');
+    }
+    public function Group()
+    {
+        $pokemons=pokemon::Group()->get();
+        return view('pokemon.index',['pokemons'=>$pokemons]);
+    }
+    public function Positions(Request $request)
+    {
+        $pokemons=pokemon::position($request->input('PM'))->get();
+        $positions=pokemon::positions()->get();
+        $data=[];
+        foreach ($positions as $position)
+        {
+            $data["$position->position"]=$position->position;
+        }
+        return view('pokemon.index',['pokemon'=>$pokemons,'positions'=>$data]);
     }
 
 }

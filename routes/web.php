@@ -24,6 +24,9 @@ Route::get('pokemons', [PokemonsController::class, 'index'])->name('pokemon.inde
 
 Route::get('pokemons/create', [PokemonsController::class, 'create'])->name('pokemon.create');
 
+Route::get('pokemons/Group', [PokemonsController::class, 'Group'])->name('pokemon.Group');
+
+Route::post('pokemons/Positions', [PokemonsController::class, 'Positions'])->name('pokemon.Positions');
 
 Route::get('pokemons/{id}', [PokemonsController::class, 'show'])->where('id', '[0-9]+')->name('pokemon.show');
 

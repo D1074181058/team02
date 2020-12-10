@@ -23,4 +23,40 @@ class pokemon extends Model
         'updated_at',
         'carbon'
     ];
+    public function scopeGroup($pokemon)
+    {
+        $pokemon->join('properties' , 'pokemons.pr_ID' , '=' , 'properties.num')
+            ->where('group','=','關都')
+            ->orderby('pokemons.num_ID')
+            ->select(
+                'pokemons.num_ID',
+                'pokemons.name',
+                'properties.property as property',
+                'pokemons.height',
+                'pokemons.weight',
+                'pokemons.growing',
+                'pokemons.group',
+                'pokemons.place',
+            );
+    }
+    public function scopePosition($pokemon,$PM)
+    {
+        $pokemon->join('properties' , 'pokemons.pr_ID' , '=' , 'properties.num')
+            ->where('group','=',$PM)
+            ->orderby('pokemons.num_ID')
+            ->select(
+                'pokemons.num_ID',
+                'pokemons.name',
+                'properties.property as property',
+                'pokemons.height',
+                'pokemons.weight',
+                'pokemons.growing',
+                'pokemons.group',
+                'pokemons.place',
+            );
+    }
+    public function scopePositions($pokemon)
+    {
+        $pokemon->select('group')->groupBY('group');
+    }
 }
