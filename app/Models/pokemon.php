@@ -55,8 +55,8 @@ class pokemon extends Model
                 'pokemons.place',
             );
     }
-    public function scopePositions($pokemon)
+    public function scopePositions($query)
     {
-        $pokemon->select('group')->groupBY('group');
+        $query->select('group')->groupBY('group');
     }
 }

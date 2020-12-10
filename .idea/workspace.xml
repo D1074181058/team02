@@ -27,15 +27,7 @@
     <list default="true" id="56524c37-4285-4c22-9b41-75e69be63c7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/pokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/pokemon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/properties/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/properties/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +203,7 @@
       <workItem from="1605762321360" duration="4630000" />
       <workItem from="1606353255447" duration="8581000" />
       <workItem from="1606961174807" duration="12536000" />
-      <workItem from="1607572034126" duration="11365000" />
+      <workItem from="1607572034126" duration="12545000" />
     </task>
     <servers />
   </component>

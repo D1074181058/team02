@@ -31,7 +31,13 @@ class PokemonsController extends Controller
 
 
             )->get();
-        return view('pokemon.index',['pokemons'=>$pokemons]);
+        $positions=pokemon::positions()->get();
+        $data=[];
+        foreach ($positions as $position)
+        {
+            $data["$position->position"]=$position->position;
+        }
+        return view('pokemon.index',['pokemons'=>$pokemons,'positions'=>$data]);
     }
 
     public function create()
@@ -156,7 +162,7 @@ class PokemonsController extends Controller
         {
             $data["$position->position"]=$position->position;
         }
-        return view('pokemon.index',['pokemon'=>$pokemons,'positions'=>$data]);
+        return view('pokemon.index',['pokemons'=>$pokemons,'positions'=>$data]);
     }
 
 }
