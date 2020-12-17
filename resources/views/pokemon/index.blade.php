@@ -5,9 +5,12 @@
 @section('header','寶可夢列表')
 
 @section('href')
+
+
+
     <a href="<?php echo route('pokemon.index');?>">回到寶可夢列表</a>
     <a href="<?php echo route('properties.index');?>">回到屬性列表</a><br/>
-    <a href="<?php echo route('pokemon.Group');?>">關都地區寶可夢</a>
+
 
 
 

@@ -6,7 +6,7 @@ use App\Models\pokemon;
 use App\Models\property;
 use Carbon\Carbon;
 use Database\Seeders\PokemonsTableSeeder;
-
+use App\Http\Requests\CreatePokemonRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -54,7 +54,15 @@ class PokemonsController extends Controller
             'created_at'=>Carbon::now() ,
             'updated_at'=>Carbon::now()]);
         */
-        return view('pokemon.create');
+        $pokemons=DB::table('properties')->
+            orderby('properties.num','asc')->
+            select('properties.num','properties.property')->get();
+        $data=[];
+        foreach ($pokemons as $pokemon)
+        {
+            $data["$pokemon->num"]=$pokemon->property;
+        }
+        return view('pokemon.create',['positions'=>$data]);
 
     }
     public function edit($id)
@@ -87,9 +95,17 @@ class PokemonsController extends Controller
         $temp->save();
         $pokemon=$temp->toArray();
          */
+        $pokemons=DB::table('properties')->
+        orderby('properties.num','asc')->
+        select('properties.num','properties.property')->get();
+        $data=[];
+        foreach ($pokemons as $pokemon)
+        {
+            $data["$pokemon->num"]=$pokemon->property;
+        }
         $temp=pokemon::findorfail($id);
 
-        return view('pokemon.edit',['pokemon'=>$temp]);
+        return view('pokemon.edit',['pokemon'=>$temp,'positions'=>$data]);
     }
 
     public function show($id)
@@ -104,8 +120,11 @@ class PokemonsController extends Controller
 
         return view('pokemon.show',['pokemons'=>$pokemon,'property_name'=>$property->property]);
     }
-    public function store(Request $request)
+    public function store(\App\Http\Requests\CreatePokemonRequest $request)
     {
+        //pokemon::create($request->all());
+
+
         $name = $request ->input('name');
         $pr_ID = $request ->input('pr_ID');
         $height = $request ->input('height');

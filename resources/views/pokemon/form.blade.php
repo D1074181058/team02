@@ -4,8 +4,8 @@
 </div>
 
 <div  align="center"  valign="center" class="form-group">
-    {!! Form::Label('pr_ID','派系編號') !!}
-    {!! Form::text('pr_ID',null,['class'=>'form-control']) !!}
+    {!! Form::Label('pr_ID','派系') !!}
+    {!! Form::select('pr_ID',$positions,['class'=>'form-control']) !!}
 </div>
 
 <div align="center"   valign="center" class="form-group">

@@ -27,7 +27,9 @@
     <list default="true" id="56524c37-4285-4c22-9b41-75e69be63c7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/pokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/pokemon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreatePokemonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreatePokemonRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +207,7 @@
       <workItem from="1606353255447" duration="8581000" />
       <workItem from="1606961174807" duration="12536000" />
       <workItem from="1607572034126" duration="12911000" />
-      <workItem from="1608177983407" duration="4562000" />
+      <workItem from="1608177983407" duration="11205000" />
     </task>
     <servers />
   </component>
@@ -243,9 +245,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="820" y="319" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1604648557466" />
-    <state x="433" y="186" key="SettingsEditor" timestamp="1604232782743">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="433" y="167" key="SettingsEditor" timestamp="1608183423660">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="433" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608183423660" />
     <state x="433" y="186" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1604232782743" />
   </component>
 </project>
