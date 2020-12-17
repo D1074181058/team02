@@ -28,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/pokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/pokemon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +178,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -203,7 +204,8 @@
       <workItem from="1605762321360" duration="4630000" />
       <workItem from="1606353255447" duration="8581000" />
       <workItem from="1606961174807" duration="12536000" />
-      <workItem from="1607572034126" duration="12545000" />
+      <workItem from="1607572034126" duration="12911000" />
+      <workItem from="1608177983407" duration="4562000" />
     </task>
     <servers />
   </component>

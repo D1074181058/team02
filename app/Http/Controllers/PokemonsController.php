@@ -35,7 +35,7 @@ class PokemonsController extends Controller
         $data=[];
         foreach ($positions as $position)
         {
-            $data["$position->position"]=$position->position;
+            $data["$position->group"]=$position->group;
         }
         return view('pokemon.index',['pokemons'=>$pokemons,'positions'=>$data]);
     }
@@ -155,12 +155,13 @@ class PokemonsController extends Controller
     }
     public function Positions(Request $request)
     {
+
         $pokemons=pokemon::position($request->input('PM'))->get();
         $positions=pokemon::positions()->get();
         $data=[];
-        foreach ($positions as $position)
+        foreach ($positions as $group)
         {
-            $data["$position->position"]=$position->position;
+            $data["$group->group"]=$group->group;
         }
         return view('pokemon.index',['pokemons'=>$pokemons,'positions'=>$data]);
     }

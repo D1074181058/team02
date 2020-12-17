@@ -39,10 +39,10 @@ class pokemon extends Model
                 'pokemons.place',
             );
     }
-    public function scopePosition($pokemon,$PM)
+    public function scopePosition($query,$PM)
     {
-        $pokemon->join('properties' , 'pokemons.pr_ID' , '=' , 'properties.num')
-            ->where('group','=',$PM)
+        $query->join('properties' , 'pokemons.pr_ID' , '=' , 'properties.num')
+            ->where('pokemons.group','=',$PM)
             ->orderby('pokemons.num_ID')
             ->select(
                 'pokemons.num_ID',
