@@ -16,7 +16,7 @@ class PokemonsController extends Controller
 
     public function index()
     {
-        $pokemons=DB::table('pokemons')
+        /*$pokemons=DB::table('pokemons')
             ->join('properties' , 'pokemons.pr_ID' , '=' , 'properties.num')
             ->orderby('pokemons.num_ID')
             ->select(
@@ -29,13 +29,14 @@ class PokemonsController extends Controller
                 'pokemons.group',
                 'pokemons.place',
 
-
             )->get();
-        $positions=pokemon::positions()->get();
+        */
+        $pokemons=pokemon::all();
+        $positions=pokemon::Positions()->get();
         $data=[];
         foreach ($positions as $position)
         {
-            $data["$position->group"]=$position->group;
+            $data["$position->position"]=$position->position;
         }
         return view('pokemon.index',['pokemons'=>$pokemons,'positions'=>$data]);
     }

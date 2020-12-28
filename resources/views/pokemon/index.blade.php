@@ -43,7 +43,7 @@
         <tr>
             <td align="center" valign="center">{{$pokemon->num_ID}}</td>
             <td align="center" valign="center">{{$pokemon->name}}</td>
-            <td align="center" valign="center">{{$pokemon->property}}</td>
+            <td align="center" valign="center">{{$pokemon->propertysss->property}}</td>
             <td align="center" valign="center">{{$pokemon->height}}</td>
             <td align="center" valign="center">{{$pokemon->weight}}</td>
             <td align="center" valign="center">

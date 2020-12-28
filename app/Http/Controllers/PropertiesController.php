@@ -5,13 +5,25 @@ use App\Models\property;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-
+use Illuminate\Support\Facades\DB;
 class PropertiesController extends Controller
 {
 
     public function index()
     {
-        $properties=property::all();
+        $properties=DB::table('properties')
+
+            ->orderby('num')
+            ->select(
+                'num',
+                'property',
+                'characteristic',
+                'home',
+                'weakness',
+
+
+
+            )->get();
         return view('properties.index',['properties'=>$properties]);
     }
 
@@ -46,22 +58,26 @@ class PropertiesController extends Controller
         $temp=property::findorfail($id);
         if ($temp==null)
             return"No Find";
-        $property=$temp->toArray();
-        return view('properties.show',$property);
+        //$property=$temp->toArray();
+
+
+        $pokemons=$temp->pokemons;
+
+
+        return view('properties.show',['property'=>$temp,'pokemons'=>$pokemons]);
     }
     public function store(Request $request)
     {
-        $property = $request ->input('name');
+        $property = $request ->input('property');
         $characteristic = $request ->input('characteristic');
         $home = $request ->input('home');
         $weakness = $request ->input('weakness');
+        property::create([
 
-
-        $pokemon=pokemon::create([
-            'name'=>$property,
-            'pr_ID'=>$characteristic,
-            'height'=>$home,
-            'weight'=>$weakness,
+            'property'=>$property,
+            'characteristic'=>$characteristic,
+            'home'=>$home,
+            'weakness'=>$weakness,
 
             'created_at'=>Carbon::now() ,
             'updated_at'=>Carbon::now()]);

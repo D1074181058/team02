@@ -23,6 +23,10 @@ class pokemon extends Model
         'updated_at',
         'carbon'
     ];
+    public function propertysss()
+    {
+        return $this->belongsTo('App\Models\property', 'pr_ID', 'num');
+    }
     public function scopeGroup($pokemon)
     {
         $pokemon->join('properties' , 'pokemons.pr_ID' , '=' , 'properties.num')

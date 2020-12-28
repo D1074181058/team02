@@ -20,4 +20,11 @@ class property extends Model
         'updated_at',
         'carbon'
     ];
+
+    public function pokemons()
+    {
+        return $this->hasMany('App\Models\pokemon', 'pr_ID');
+    }
+
+
 }
