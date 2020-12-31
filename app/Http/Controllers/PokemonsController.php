@@ -186,4 +186,57 @@ class PokemonsController extends Controller
         return view('pokemon.index',['pokemons'=>$pokemons,'positions'=>$data]);
     }
 
+    public function api_pokemons()
+    {
+        return pokemon::all();
+    }
+
+    public function api_update(Request $request)
+    {
+        $pokemon = pokemon::find($request->input('num_ID'));
+
+        if ($pokemon  == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        $pokemon->name = $request->input('name');
+        $pokemon->pr_ID = $request->input('pr_ID');
+        $pokemon->height = $request->input('height');
+        $pokemon->weight = $request->input('weight');
+        $pokemon->growing = $request->input('growing');
+        $pokemon->group = $request->input('group');
+        $pokemon->place = $request->input('place');
+
+        if ($pokemon->save())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        } else {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+    }
+    public function api_delete(Request $request)
+    {
+        $pokemon = pokemon::find($request->input('num_ID'));
+
+        if (pokemon == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        if ($pokemon->delete())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        }
+    }
 }

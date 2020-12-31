@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\pokemon;
 use App\Models\property;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -100,4 +101,60 @@ class PropertiesController extends Controller
         $property->delete();
         return redirect('properties');
     }
+
+
+
+    public function api_properties(){
+        return property::all();
+    }
+    public function api_update(Request $request)
+    {
+        $property = property::find($request->input('num'));
+
+        if ($property  == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        $property->property = $request->input('property');
+        $property->characteristic = $request->input('characteristic');
+        $property->home = $request->input('home');
+        $property->weakness = $request->input('weakness');
+
+
+        if ($property->save())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        } else {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+    }
+    public function api_delete(Request $request)
+    {
+        $property = property::find($request->input('num'));
+
+        if (property == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        if ($property->delete())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        }
+    }
+
+
+
+
 }

@@ -25,13 +25,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56524c37-4285-4c22-9b41-75e69be63c7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/team02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/team02.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/pokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/pokemon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/property.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/property.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/properties/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +165,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
     </include_path>
   </component>
   <component name="ProjectId" id="1idtxzlfxjRufZV2oQSs2Yf1Wmo" />
@@ -210,6 +213,7 @@
       <workItem from="1607572034126" duration="12911000" />
       <workItem from="1608177983407" duration="11283000" />
       <workItem from="1608773197226" duration="9142000" />
+      <workItem from="1609387187162" duration="10398000" />
     </task>
     <servers />
   </component>
@@ -234,19 +238,19 @@
     </state>
     <state x="1018" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605154118032" />
     <state x="1018" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1604676977401" />
-    <state x="548" y="257" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608773983408">
+    <state x="548" y="257" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609398871505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="548" y="257" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608773983408" />
+    <state x="548" y="257" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609398871505" />
     <state x="548" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1604669442419" />
     <state x="667" y="415" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1604243438592">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="667" y="415" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1920.1160@0.0.1920.1160" timestamp="1604243438592" />
-    <state x="820" y="286" key="FileChooserDialogImpl" timestamp="1608776624066">
+    <state x="820" y="286" key="FileChooserDialogImpl" timestamp="1609393044800">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="820" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608776624066" />
+    <state x="820" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609393044800" />
     <state x="820" y="319" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1604648557466" />
     <state x="433" y="167" key="SettingsEditor" timestamp="1608183423660">
       <screen x="0" y="0" width="1920" height="1040" />
