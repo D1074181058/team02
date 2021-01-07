@@ -10,7 +10,9 @@
 @endsection
 
 @section('pokemon_contents')
+
     <p align="center"  valign="center" >編號：{!! $properties->num !!} </p><br/>
+    @include('message.errors')
     {!! Form::model($properties,['method'=>'PATCH','action'=>['\App\Http\Controllers\PropertiesController@update',$properties->num]]) !!}
     @include('properties.form',['submitButtonText'=>"編輯屬性"])
     {!! Form::close() !!}

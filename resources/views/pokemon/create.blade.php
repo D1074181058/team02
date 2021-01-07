@@ -9,14 +9,7 @@
 @endsection
 
 @section('pokemon_contents')
-    @if($errors->any())
-        <ul class="alert alert-danger">
-            @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        </ul>
-    @endif
-
+    @include('message.errors')
     {!! Form::open(['url' => 'pokemons/store']) !!}
     @include('pokemon.form',['submitButtonText'=>"新建寶可夢"])
     {!! Form::close() !!}

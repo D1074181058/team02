@@ -36,34 +36,25 @@ class PokemonsController extends Controller
         $data=[];
         foreach ($positions as $position)
         {
-            $data["$position->position"]=$position->position;
+            $data["$position->group"]=$position->group;
         }
         return view('pokemon.index',['pokemons'=>$pokemons,'positions'=>$data]);
     }
 
     public function create()
     {
-        /*
-        $pokemon=pokemon::create([
-            'name'=>'達克萊伊',
-            'pr_ID'=>15,
-            'height'=>1.5,
-            'weight'=>'50.5',
-            'growing'=>'否',
-            'group'=>'神奧',
-            'place'=>'無固定場所',
-            'created_at'=>Carbon::now() ,
-            'updated_at'=>Carbon::now()]);
-        */
+
         $pokemons=DB::table('properties')->
             orderby('properties.num','asc')->
             select('properties.num','properties.property')->get();
         $data=[];
+        $half=['是' => '是', '否' => '否'];
+        $place=['關都'=>'關都','城都'=>'城都','豐緣'=>'豐緣','神奧'=>'神奧','合眾'=>'合眾','卡洛斯'=>'卡洛斯','阿羅拉'=>'阿羅拉','鎧島'=>'鎧島'];
         foreach ($pokemons as $pokemon)
         {
             $data["$pokemon->num"]=$pokemon->property;
         }
-        return view('pokemon.create',['positions'=>$data]);
+        return view('pokemon.create',['positions'=>$data,'half'=>$half,'place'=>$place]);
 
     }
     public function edit($id)
@@ -100,13 +91,19 @@ class PokemonsController extends Controller
         orderby('properties.num','asc')->
         select('properties.num','properties.property')->get();
         $data=[];
+
+        $half=[
+            '是' => '是',
+            '否' => '否'
+        ];
+        $place=['關都'=>'關都','城都'=>'城都','豐緣'=>'豐緣','神奧'=>'神奧','合眾'=>'合眾','卡洛斯'=>'卡洛斯','阿羅拉'=>'阿羅拉','鎧島'=>'鎧島'];
         foreach ($pokemons as $pokemon)
         {
             $data["$pokemon->num"]=$pokemon->property;
         }
         $temp=pokemon::findorfail($id);
 
-        return view('pokemon.edit',['pokemon'=>$temp,'positions'=>$data]);
+        return view('pokemon.edit',['pokemon'=>$temp,'positions'=>$data,'half'=>$half,'place'=>$place]);
     }
 
     public function show($id)
@@ -149,7 +146,7 @@ class PokemonsController extends Controller
 
 
     }
-    public function update($id ,Request $request)
+    public function update($id ,\App\Http\Requests\CreatePokemonRequest $request)
     {
         $temp=pokemon::findorfail($id);
         $temp->name = $request ->input('name');
@@ -168,6 +165,7 @@ class PokemonsController extends Controller
         $pokemon->delete();
         return redirect('pokemons');
     }
+
     public function Group()
     {
         $pokemons=pokemon::Group()->get();
@@ -176,15 +174,19 @@ class PokemonsController extends Controller
     public function Positions(Request $request)
     {
 
-        $pokemons=pokemon::position($request->input('PM'))->get();
-        $positions=pokemon::positions()->get();
+        $pokemons=pokemon::Position($request->input('PM'))->get();
+        $positions=pokemon::Positions()->get();
         $data=[];
+
         foreach ($positions as $group)
         {
             $data["$group->group"]=$group->group;
         }
         return view('pokemon.index',['pokemons'=>$pokemons,'positions'=>$data]);
     }
+
+
+
 
     public function api_pokemons()
     {

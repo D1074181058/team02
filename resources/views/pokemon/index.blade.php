@@ -8,9 +8,9 @@
 
 
 
-    <a href="<?php echo route('pokemon.index');?>">回到寶可夢列表</a>
-    <a href="<?php echo route('properties.index');?>">回到屬性列表</a><br/>
 
+    <a href="<?php echo route('properties.index');?>">回到屬性列表</a>
+    <a href="<?php echo route('pokemon.create');?>">新增寶可夢</a></br>
 
 
 
@@ -43,7 +43,7 @@
         <tr>
             <td align="center" valign="center">{{$pokemon->num_ID}}</td>
             <td align="center" valign="center">{{$pokemon->name}}</td>
-            <td align="center" valign="center">{{$pokemon->propertysss->property}}</td>
+            <td align="center" valign="center">{{$pokemon->property->property}}</td>
             <td align="center" valign="center">{{$pokemon->height}}</td>
             <td align="center" valign="center">{{$pokemon->weight}}</td>
             <td align="center" valign="center">

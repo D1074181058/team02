@@ -26,5 +26,27 @@ class property extends Model
         return $this->hasMany('App\Models\pokemon', 'pr_ID');
     }
 
+    Public function delete()
+    {
+        $this->pokemons()->delete();
+        return parent::delete();
+    }
 
+    public function scopePosition($query,$PR)
+    {
+        $query->where('home','=',$PR)
+            ->orderby('num')
+            ->select(
+                'num',
+                'property',
+                'characteristic',
+                'home',
+                'weakness'
+            );
+    }
+
+    public function scopePositions($query)
+    {
+        $query->select('home')->groupBY('home');
+    }
 }

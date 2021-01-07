@@ -8,8 +8,10 @@
     <a href="<?php echo route('pokemon.index');?>">回到寶可夢列表</a>
 @endsection
 
-@section('pokemon_contents')s
+@section('pokemon_contents')
+
     <p align="center"  valign="center" >編號：{!! $pokemon->num_ID !!} </p><br/>
+    @include('message.errors')
     {!! Form::model($pokemon,['method'=>'PATCH','action'=>['\App\Http\Controllers\PokemonsController@update',$pokemon->num_ID]]) !!}
     @include('pokemon.form',['submitButtonText'=>"編輯寶可夢"])
     {!! Form::close() !!}

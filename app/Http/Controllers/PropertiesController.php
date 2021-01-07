@@ -12,20 +12,18 @@ class PropertiesController extends Controller
 
     public function index()
     {
-        $properties=DB::table('properties')
+        $properties=property::all();
 
-            ->orderby('num')
-            ->select(
-                'num',
-                'property',
-                'characteristic',
-                'home',
-                'weakness',
+        $positions = property::Positions()->get();
 
+        $data=[];
 
+        foreach ($positions as $home)
+        {
+            $data["$home->home"]=$home->home;
+        }
 
-            )->get();
-        return view('properties.index',['properties'=>$properties]);
+        return view('properties.index',['properties'=>$properties,'positions'=>$data]);
     }
 
     public function create()
@@ -67,7 +65,7 @@ class PropertiesController extends Controller
 
         return view('properties.show',['property'=>$temp,'pokemons'=>$pokemons]);
     }
-    public function store(Request $request)
+    public function store(\App\Http\Requests\CreatePropertyRequest $request)
     {
         $property = $request ->input('property');
         $characteristic = $request ->input('characteristic');
@@ -85,10 +83,10 @@ class PropertiesController extends Controller
 
         return redirect('properties');
     }
-    public function update($id,Request $request){
+    public function update($id,\App\Http\Requests\CreatePropertyRequest $request){
 
         $temp=property::findorfail($id);
-        $temp->property = $request ->input('name');
+        $temp->property = $request ->input('property');
         $temp->characteristic = $request ->input('characteristic');
         $temp->home = $request ->input('home');
         $temp->weakness = $request ->input('weakness');
@@ -100,6 +98,19 @@ class PropertiesController extends Controller
         $property=property::findorfail($id);
         $property->delete();
         return redirect('properties');
+    }
+    public function Positions(Request $request)
+    {
+
+        $properties=property::Position($request->input('PR'))->get();
+        $positions=property::Positions()->get();
+        $data=[];
+
+        foreach ($positions as $home)
+        {
+            $data["$home->home"]=$home->home;
+        }
+        return view('properties.index',['properties'=>$properties,'positions'=>$data]);
     }
 
 

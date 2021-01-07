@@ -10,6 +10,7 @@
 @endsection
 
 @section('pokemon_contents')
+    @include('message.errors')
     {!! Form::open(['url' => 'properties/store']) !!}
     @include('properties.form',['submitButtonText'=>"新建屬性"])
     {!! Form::close() !!}

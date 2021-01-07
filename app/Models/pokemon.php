@@ -23,7 +23,7 @@ class pokemon extends Model
         'updated_at',
         'carbon'
     ];
-    public function propertysss()
+    public function property()
     {
         return $this->belongsTo('App\Models\property', 'pr_ID', 'num');
     }
@@ -45,20 +45,11 @@ class pokemon extends Model
     }
     public function scopePosition($query,$PM)
     {
-        $query->join('properties' , 'pokemons.pr_ID' , '=' , 'properties.num')
-            ->where('pokemons.group','=',$PM)
-            ->orderby('pokemons.num_ID')
-            ->select(
-                'pokemons.num_ID',
-                'pokemons.name',
-                'properties.property as property',
-                'pokemons.height',
-                'pokemons.weight',
-                'pokemons.growing',
-                'pokemons.group',
-                'pokemons.place',
-            );
+        $query->where('pokemons.group','=',$PM)
+            ->orderby('pokemons.num_ID');
     }
+
+
     public function scopePositions($query)
     {
         $query->select('group')->groupBY('group');

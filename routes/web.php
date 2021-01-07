@@ -44,6 +44,7 @@ Route::get('properties', [PropertiesController::class, 'index'])->name('properti
 
 Route::get('properties/create', [PropertiesController::class, 'create'])->name('property.create');
 
+Route::post('properties/Positions', [PropertiesController::class, 'Positions'])->name('properties.Positions');
 
 Route::get('properties/{id}', [PropertiesController::class, 'show'])->where('id', '[0-9]+')->name('properties.show');
 

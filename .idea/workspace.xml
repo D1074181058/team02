@@ -25,15 +25,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56524c37-4285-4c22-9b41-75e69be63c7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/team02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/team02.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/message/errors.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreatePokemonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreatePokemonRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreatePropertyRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreatePropertyRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/pokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/pokemon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/property.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/property.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pokemon/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/properties/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/properties/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/properties/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/properties/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +222,8 @@
       <workItem from="1607572034126" duration="12911000" />
       <workItem from="1608177983407" duration="11283000" />
       <workItem from="1608773197226" duration="9142000" />
-      <workItem from="1609387187162" duration="10398000" />
+      <workItem from="1609387187162" duration="10585000" />
+      <workItem from="1609982594103" duration="18566000" />
     </task>
     <servers />
   </component>
@@ -247,10 +257,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="667" y="415" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1920.1160@0.0.1920.1160" timestamp="1604243438592" />
-    <state x="820" y="286" key="FileChooserDialogImpl" timestamp="1609393044800">
+    <state x="820" y="286" key="FileChooserDialogImpl" timestamp="1609987821392">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="820" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609393044800" />
+    <state x="820" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609987821392" />
     <state x="820" y="319" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1604648557466" />
     <state x="433" y="167" key="SettingsEditor" timestamp="1608183423660">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -261,5 +271,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="571" y="287" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608788705091" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609999244549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609999244549" />
   </component>
 </project>

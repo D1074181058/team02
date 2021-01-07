@@ -6,6 +6,15 @@
 
 @section('href')
     <a href="<?php echo route('pokemon.index');?>">回到神奇寶貝列表</a>
+    <a href="<?php echo route('property.create');?>">新增屬性</a>
+
+    <form action="{{route('properties.Positions')}}" method="post">
+        {!! Form::label('PR','選取主場：') !!}
+        {!! Form::select('PR',$positions,['class'=>'form-control']) !!}
+        <input class="btn btn-default" type="submit" value="查詢">
+        @csrf
+    </form>
+
  @endsection
 
 
