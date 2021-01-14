@@ -25,7 +25,7 @@ class CreatePokemonRequest extends FormRequest
     {
         return [
               'name' =>'required|string|max:10',
-            'pr_ID' =>'required|numeric|max:15',
+            'pr_ID' =>'required|numeric|max:20',
             'height' =>'required|numeric',
             'weight' =>'required|numeric',
             'growing'=>'required|string|max:1',

@@ -227,7 +227,7 @@ class PokemonsController extends Controller
     {
         $pokemon = pokemon::find($request->input('num_ID'));
 
-        if (pokemon == null)
+        if ($pokemon == null)
         {
             return response()->json([
                 'status' => 0,

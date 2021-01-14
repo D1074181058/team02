@@ -150,7 +150,7 @@ class PropertiesController extends Controller
     {
         $property = property::find($request->input('num'));
 
-        if (property == null)
+        if ($property == null)
         {
             return response()->json([
                 'status' => 0,
