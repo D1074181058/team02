@@ -26,10 +26,7 @@
   <component name="ChangeListManager">
     <list default="true" id="56524c37-4285-4c22-9b41-75e69be63c7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PokemonsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertiesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreatePokemonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreatePokemonRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreatePropertyRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreatePropertyRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,6 +209,11 @@
       <workItem from="1609387187162" duration="10585000" />
       <workItem from="1609982594103" duration="19335000" />
       <workItem from="1610591310772" duration="5486000" />
+      <workItem from="1610715712396" duration="68000" />
+      <workItem from="1611662027267" duration="65000" />
+      <workItem from="1611662124296" duration="3612000" />
+      <workItem from="1611896002492" duration="70000" />
+      <workItem from="1615717109638" duration="874000" />
     </task>
     <servers />
   </component>
